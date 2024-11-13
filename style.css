@@ -1,0 +1,129 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--index: calc(1vw+1vh);
+}
+@font-face {
+	font-family: kameric-3d;
+	src: url(/fonts/kamerik205-heavy.woff2);
+}
+@font-face {
+	font-family: meri-weather-italic-3d;
+	src: url(/fonts/merriweather-regular-italic.woff2);
+}
+body {
+	color: #fff;
+	background-color: #000;
+	font-family: kameric-3d;
+}
+.logo {
+	width: calc(var(--index) * 0.01);
+	height: 150px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	z-index: 1;
+}
+.layers {
+	perspective: 1000px;
+}
+.layers__container {
+	height: 100vh;
+	transform-style: preserve-3d;
+	transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+	will-change: transform;
+}
+.layers__item {
+	position: absolute;
+	inset: -5vw;
+	background-size: cover;
+	background-position: center;
+	align-items: center;
+	justify-content: center;
+}
+.layer-1 {
+	transform: translateZ(-155px) scale(1.09);
+}
+.layer-2 {
+	transform: translateZ(80px) scale(0.88);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.layer-3 {
+	transform: translateZ(180px);
+}
+
+.layer-4 {
+	transform: translateZ(190px) scale(0.9);
+}
+
+.layer-5 {
+	transform: translateZ(300px);
+}
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+.hero-content h1 {
+	mix-blend-mode: screen;
+	background-image: repeating-linear-gradient(
+			-45deg,
+			transparent,
+			transparent 1em,
+			#c9069e 1em,
+			#ff0361 50%
+		),
+		repeating-linear-gradient(
+			45deg,
+			#ff0361,
+			#ff0361 1em,
+			#fff 1em,
+			#c9069e 50%
+		);
+	background-size: 3em 3em, 2em 2em;
+	animation-name: ani;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	font-size: 35px;
+	text-transform: uppercase;
+}
+
+.hero-content__p {
+	color: rgb(201, 6, 158);
+}
+@keyframes ani {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 100% 0;
+	}
+}
+.button {
+	filter: blur(1px);
+	background-color: transparent;
+	border: none;
+	font-size: 20px;
+	background: rgb(201, 6, 158);
+	background: radial-gradient(
+		circle,
+		rgba(201, 6, 158, 1) 0%,
+		rgba(255, 3, 97, 1) 100%
+	);
+	width: 150px;
+	aspect-ratio: 2/1;
+	border-radius: 50px;
+	color: white;
+	font-weight: 700;
+}
