@@ -3,36 +3,53 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>parallax by devert</title>
 		<link rel="stylesheet" href="./style.css" />
-		<title>Japan advertisment</title>
-		<script src="./script.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		/>
 	</head>
 	<body>
-		<div class="logo" style="background-image: url(./img/noun-japan-3661382.svg)"></div>
-		<section class="layers">
-			<div class="layers__container">
-				<div
-					class="layers__item layer-1"
-					style="background-image: url(./img/back.jpg)"
-				></div>
-				<div class="layers__item layer-2">
-					<div class="hero-content">
-						<h1>Site 3d main screen</h1>
-						<span>made by devert007</span>
-						<div class="hero-content__p">move your mouse for effect</div>
-						<button class="button ">Good luck</button>
-					</div>
-				</div>
-				<div
-					class="layers__item layer-4"
-					style="background-image: url(./img/layer-5.png)"
-				></div>
-				<!-- <div
-					class="layers__item layer-5"
-					style="background-image: url(/img/layer-6.png)"
-				></div> -->
+		<header>
+			<nav>
+				<a href="" class="nav-items">Home</a>
+				<a href="" class="nav-items">About</a>
+				<a href="" class="nav-items">Review</a>
+				<a href="" class="nav-items">Gallery</a>
+				<a href="" class="nav-items">Contacts</a>
+			</nav>
+		</header>
+		<div class="content">
+			<img src="./img/bac 3.png" data-speed="3" alt="background" class="back-3" />
+			<div class="title">
+				<h3>Site by devert007</h3>
+				<h1>Hello world</h1>
 			</div>
-		</section>
-		<div style="height: 100vh"></div>
+			<img src="./img/bac 2.2.png" data-speed="2" alt="background" class="back-2" />
+			<img src="./img/bac 1.png" data-speed="1"alt="background" class="back-1" />
+			<div class="info-wrap">
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio non
+					mollitia natus. Adipisci tempora reiciendis perferendis vitae!
+					Distinctio dolorum non soluta vero ab ad aliquam maiores! Consequatur
+					nisi eius praesentium?Lorem ipsum dolor, sit amet consectetur
+					adipisicing elit. Alias magnam eaque dolor vitae fugiat commodi, quos
+					reiciendis eum. Dolorem est cum ad harum nesciunt fugit. Quisquam
+					ipsum expedita repellat animi.
+				</p>
+			</div>
+
+			<div class="cta">
+				<button class="buttonReload" onclick="onClickReload()">Ctrl+R</button>
+
+			</div>
+			<div class="slider">
+				<i class="fa-solid fa-chevron-left"></i>
+				<i class="fa-solid fa-chevron-right"></i>
+			</div>
+		</div>
+    <script src="./script.js"></script>
+    
 	</body>
 </html>
